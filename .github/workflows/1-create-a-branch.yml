@@ -59,6 +59,7 @@ jobs:
           file: ${{ env.STEP_2_FILE }}
 
       - name: Create comment - watching for progress
+        continue-on-error: true
         uses: GrantBirki/comment@v2.1.1
         with:
           repository: ${{ env.ISSUE_REPOSITORY }}
